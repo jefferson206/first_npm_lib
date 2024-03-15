@@ -1,0 +1,118 @@
+
+<nav class="navbar" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <j-button
+        [id]="'btn-test_enabled'"
+        (buttonClick)="handleClickTeste('Teste')"
+        >Click me
+      </j-button>
+    </div>
+    <div class="col-6">
+      <div class="input gap-2 mb-3">
+        <j-input
+          [placeholder]="'OOOOpaa'"
+        >
+        </j-input>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 pt-3">
+      <div class="input gap-2 mb-3">
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon12">
+        <input type="text" class="form-control" placeholder="Username 2" aria-label="Username 2" aria-describedby="basic-addon12">
+      </div>
+
+      <div class="form-floating input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">'&#64;'</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Username 2" aria-label="Username 2" id="floatingInput">
+        <label for="floatingInput">Email address</label>
+      </div>
+
+      <div class="form-floating input mb-3">
+        <input type="text" class="form-control" placeholder="Username 2" aria-label="Username 55" id="floatingInput2" aria-describedby="basic-addon123">
+        <label for="floatingInput2">Email address 2</label>
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2">'&#64;'example.com</span>
+      </div>
+
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">Your vanity URL</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+        </div>
+        <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">.00</span>
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+        <span class="input-group-text">&commat;</span>
+        <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-text">With textarea</span>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+
+
+    <div class="col-6">
+      <div class="grid gap-0 row-gap-3">
+        <div class="p-2 g-col-6">
+          <input type="text" class="form-control" placeholder="Server 1" aria-label="Server">
+        </div>
+        <div class="p-2 g-col-6">
+          <input type="text" class="form-control" placeholder="Server 2" aria-label="Server">
+        </div>
+        <div class="p-2 g-col-6">
+          <input type="text" class="form-control" placeholder="Server 3" aria-label="Server">
+        </div>
+        <div class="p-2 g-col-6">
+          <input type="text" class="form-control" placeholder="Server 4" aria-label="Server">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet />
