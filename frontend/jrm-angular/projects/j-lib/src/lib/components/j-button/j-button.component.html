@@ -1,0 +1,10 @@
+<button
+  type="button"
+  [class]="defaultClass"
+  [id]="prefixId + '__' + id"
+  [ngClass]="extraClasses"
+  [disabled]="disable"
+  (click)="handleButtonClick($event)"
+>
+  <ng-content></ng-content>
+</button>

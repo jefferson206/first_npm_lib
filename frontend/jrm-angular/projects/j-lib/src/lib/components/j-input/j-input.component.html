@@ -1,0 +1,34 @@
+<div class="w-100 was-validated" [ngClass]="{
+  'form-floating w-100': floatLabel,
+  'was-validated w-100': required }"
+>
+  @if (!floatLabel && label !== '') {
+  <label [for]="prefixId + '__' + id">{{ label }}</label>
+  }
+  <input
+    [ngStyle]="style"
+    [type]="JInputType"
+    [class]="defaultClass"
+    [id]="prefixId + '__' + id"
+    [ngClass]="extraClasses"
+    [placeholder]="placeholder"
+    [maxLength]="maxLength"
+    [formControl]="control"
+    [mask]="mask"
+    [dropSpecialCharacters]="maskDropSpecialCharacters"
+    [showMaskTyped]="showMaskBeforeType"
+    [prefix]="prefixMask"
+    [allowNegativeNumbers]="allowNegativeNumbersMask"
+    [suffix]="suffixMask"
+    [required]="required"
+  >
+  @if(required) {
+    <div class="invalid-feedback">
+      {{ label }} is invalid.
+    </div>
+  }
+  @if (floatLabel) {
+    <label [for]="prefixId + '__' + id">{{ label }}</label>
+  }
+</div>
+
