@@ -1,6 +1,4 @@
-<div class="w-100 was-validated" [ngClass]="{
-  'form-floating w-100': floatLabel,
-  'was-validated w-100': required }"
+<div [ngClass]="{'form-floating w-100': floatLabel, 'was-validated w-100': required }"
 >
   @if (!floatLabel && label !== '') {
   <label [for]="prefixId + '__' + id">{{ label }}</label>
@@ -8,7 +6,7 @@
   <input
     [ngStyle]="style"
     [type]="JInputType"
-    [class]="defaultClass"
+    [class]="class"
     [id]="prefixId + '__' + id"
     [ngClass]="extraClasses"
     [placeholder]="placeholder"
@@ -23,7 +21,7 @@
     [required]="required"
   >
   @if(required) {
-    <div class="invalid-feedback">
+    <div [class]="invalidClass">
       {{ label }} is invalid.
     </div>
   }

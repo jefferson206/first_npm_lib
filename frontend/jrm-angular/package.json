@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "dev": "concurrently \"npm run lib\" \"npm run start\" ",
+    "lib": "cd projects\\j-lib && ng build j-lib --configuration=development --watch",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

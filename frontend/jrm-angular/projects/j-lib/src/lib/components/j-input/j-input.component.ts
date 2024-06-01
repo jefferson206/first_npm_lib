@@ -12,7 +12,6 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from "ngx-mask";
 })
 export class JInputComponent implements OnInit {
   protected prefixId = 'JInput';
-  protected defaultClass = 'form-control w-100';
   protected JInputType = 'text'
   protected required = false;
 
@@ -22,7 +21,8 @@ export class JInputComponent implements OnInit {
   @Input() control!: FormControl;
   @Input() floatLabel = true;
   @Input() extraClasses = '';
-  @Input() label= `Label`;
+  @Input() class = 'form-control w-100';
+  @Input() label= 'Label';
   @Input() placeholder = '';
   @Input() maxLength = 250;
   @Input() style = {};
@@ -32,9 +32,10 @@ export class JInputComponent implements OnInit {
   @Input() suffixMask = '';
   @Input() showMaskBeforeType = false;
   @Input() maskDropSpecialCharacters = true;
+  @Input() invalidClass = 'invalid-feedback';
 
   ngOnInit(): void {
-    this._handleControlChange()
+    this._handleControlChange();
     this._checkIfControlIsRequired();
   }
 

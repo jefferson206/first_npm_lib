@@ -1,65 +1,9 @@
-
-<nav class="navbar" style="background-color: #e3f2fd;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+<app-example-navbar></app-example-navbar>
 
 <div class="container">
-  <div class="row mt-2">
-    <div class="col-6">
-      <j-button [id]="'btn-test_enabled'"
-        (buttonClick)="handleClickTeste('Teste')">Click me
-      </j-button>
-      <j-button [id]="'btn-test_disabled'"
-                [extraClasses]="'mt-2 btn-success'"
-                [disable]="false"
-                (buttonClick)="handleDisableName()">Disabled name
-      </j-button>
-    </div>
-    <div class="col-6">
-      <div class="mb-3">
-        <j-input [extraClasses]="'mb-2'"
-          [floatLabel]="false"
-          [label]="'Your name'"
-          [id]="'PlainInput'"
-          [notAcceptSpecialCharacters]="false"
-          [maxLength]="14"
-          [mask]="'CPF_CNPJ'"
-          [placeholder]="'Place your name here...'"
-          [control]="formGroup.controls.name">
-        </j-input>
+    <app-example-input></app-example-input>
 
-        <j-input [id]="'FloatLabel'"
-          [label]="'Surname'"
-          [acceptOnlyLetters]="true"
-          [control]="formGroup.controls.nameMaxFiveLength"
-          >
-        </j-input>
-
-      </div>
-    </div>
-  </div>
+  <app-example-select></app-example-select>
 
   <router-outlet />
 </div>

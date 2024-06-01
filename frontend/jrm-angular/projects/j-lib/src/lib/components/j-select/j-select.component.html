@@ -1,0 +1,29 @@
+<div [class]="divClass">
+  <select [class]="class" style="width:auto;"
+          [id]="prefixId+'__'+id"
+          [formControl]="control"
+          [attr.has-value]="hasValue"
+          [ngClass]="{ 'ipt__invalid': invalid, 'ipt__valid': valid }">
+    <ng-container *ngIf="nullable && nullOptionName">
+      <option [ngValue]="null" >
+        {{nullOptionName}}
+      </option>
+    </ng-container>
+    <ng-container *ngIf="nullable && !nullOptionName">
+      <option [ngValue]="null"></option>
+    </ng-container>
+    <ng-container *ngFor="let option of options">
+      <option [ngValue]="option.value" [disabled]="option.disabled">
+        {{option.label}}
+      </option>
+    </ng-container>
+  </select>
+  <label class="ipt__label"
+         [for]="prefixId+'__'+id"> {{label}}
+  </label>
+  @if(isRequired) {
+    <div [class]="invalidClass">
+      {{ label }} is invalid.
+    </div>
+  }
+</div>

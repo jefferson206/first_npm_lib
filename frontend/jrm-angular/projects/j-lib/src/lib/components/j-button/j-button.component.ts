@@ -4,15 +4,14 @@ import { CommonModule } from "@angular/common";
   selector: 'j-button',
   standalone: true,
   imports: [ CommonModule ],
-  templateUrl: './j-button.component.html',
-  styleUrl: './j-button.component.css'
+  templateUrl: './j-button.component.html'
 })
 export class JButtonComponent {
   protected prefixId = 'JButton';
-  protected defaultClass = 'btn w-100';
   @Input() id = '';
   @Input() disable = false;
   @Input() extraClasses = 'btn-primary';
+  @Input() class = 'btn w-100';
   @Output() buttonClick = new EventEmitter();
 
   handleButtonClick(event: any) {

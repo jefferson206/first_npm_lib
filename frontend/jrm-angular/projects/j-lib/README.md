@@ -23,3 +23,7 @@ Run `ng test j-lib` to execute the unit tests via [Karma](https://karma-runner.g
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+cd walk-throw/frontend/jrm-angular/projects/j-lib/
+ng build j-lib --configuration=development --watch
+npm publish --access public 
