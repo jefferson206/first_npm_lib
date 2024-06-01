@@ -13,7 +13,6 @@ import {FormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
     JInputComponent,
   ],
   templateUrl: './example-input.component.html',
-  styleUrl: './example-input.component.scss'
 })
 export class ExampleInputComponent {
   formGroup = this.formBuilder.group({

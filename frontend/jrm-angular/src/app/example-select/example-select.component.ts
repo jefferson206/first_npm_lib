@@ -1,6 +1,6 @@
-import {Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { JSelectComponent } from "j-lib";
-import {FormBuilder, Validators} from "@angular/forms";
+import { FormBuilder, Validators } from "@angular/forms";
 import { JButtonComponent } from "jrm-lib";
 
 @Component({
@@ -11,11 +11,10 @@ import { JButtonComponent } from "jrm-lib";
     JButtonComponent,
   ],
   templateUrl: './example-select.component.html',
-  styleUrl: './example-select.component.scss'
 })
 export class ExampleSelectComponent implements OnInit {
   readonly OPTIONS = [
-    { value: true, label: 'Yes sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf', default: true, disabled: false },
+    { value: true, label: 'Yes', default: true, disabled: false },
     { value: false, label: 'No', disabled: false }
   ];
 

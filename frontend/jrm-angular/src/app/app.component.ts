@@ -4,6 +4,7 @@ import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} fr
 import {ExampleInputComponent} from "./example-input/example-input.component";
 import {ExampleNavbarComponent} from "./example-navbar/example-navbar.component";
 import {ExampleSelectComponent} from "./example-select/example-select.component";
+import {ExampleRadioComponent} from "./example-radio/example-radio.component";
 
 @Component({
   selector: 'app-root',
@@ -14,13 +15,14 @@ import {ExampleSelectComponent} from "./example-select/example-select.component"
     ExampleInputComponent,
     ExampleNavbarComponent,
     ExampleSelectComponent,
+    ExampleRadioComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor() {
   }
 
 }
