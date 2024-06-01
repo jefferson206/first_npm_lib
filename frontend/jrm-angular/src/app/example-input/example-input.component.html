@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row mt-2">
+      <div class="col-6">
+        <j-button [id]="'btn-test_enabled'"
+                  [class]="'btn w-100'"
+          (buttonClick)="handleClickTeste('Teste')">Click me
+        </j-button>
+        <j-button [id]="'btn-test_disabled'"
+                  [extraClasses]="'mt-2 btn-success'"
+                  [disable]="false"
+                  (buttonClick)="handleDisableName()">Disabled name
+        </j-button>
+      </div>
+      <div class="col-6">
+        <div class="mb-3">
+          <j-input [extraClasses]="'mb-2'"
+            [floatLabel]="false"
+            [label]="'Your name'"
+            [id]="'PlainInput'"
+            [notAcceptSpecialCharacters]="false"
+            [maxLength]="14"
+            [mask]="'CPF_CNPJ'"
+            [placeholder]="'Place your name here...'"
+            [control]="formGroup.controls.name">
+          </j-input>
+
+          <j-input [id]="'FloatLabel'"
+            [label]="'Surname'"
+            [acceptOnlyLetters]="true"
+            [control]="formGroup.controls.nameMaxFiveLength"
+            >
+          </j-input>
+
+        </div>
+      </div>
+    </div>
+  </div>

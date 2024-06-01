@@ -1,0 +1,16 @@
+<div class="row mt-2">
+  <div class="col-6">
+    <j-select
+      [options]="OPTIONS"
+      [control]="formGroup.controls.name"
+      [id]="'Test'">
+
+    </j-select>
+  </div>
+  <div class="col-6">
+    <j-button [id]="'btn-test_enabled'"
+              [class]="'btn w-100'"
+              (buttonClick)="handleClickTeste()">Click me
+    </j-button>
+  </div>
+</div>
