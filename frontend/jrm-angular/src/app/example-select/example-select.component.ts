@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import { JSelectComponent } from "j-lib";
 import {FormBuilder, Validators} from "@angular/forms";
 import { JButtonComponent } from "jrm-lib";

@@ -26,7 +26,7 @@ export class ExampleInputComponent {
 
   readonly customPatterns = { '0': { pattern: new RegExp('\[a-zA-Z\]')} };
 
-  handleClickTeste(event: any) {
+  handleClickTeste() {
     this.formGroup.controls.name.setErrors({'incorrect': true});
   }
 
