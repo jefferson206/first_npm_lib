@@ -1,14 +1,12 @@
 <div class="row mt-3">
-  <div class="col-6">
-    <j-radio [options]="OPTIONS"
-             [control]="formGroup.controls.name">
+  <div class="col-6 mt-4">
+    <j-radio
+      [isRadioReverse]="false"
+      [options]="OPTIONS" [control]="formGroup.controls.name" >
 
     </j-radio>
   </div>
-  <div class="col-6">
-    <j-button [id]="'btn-test_enabled'"
-              [class]="'btn w-100'"
-              (buttonClick)="handleClickTeste()">Click me
-    </j-button>
+  <div class="col-6 mt-4">
+
   </div>
 </div>

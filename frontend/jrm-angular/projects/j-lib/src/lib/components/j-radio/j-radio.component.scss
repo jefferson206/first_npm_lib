@@ -1,0 +1,84 @@
+@import '../../_sass/colors';
+@import '../../_sass/shadows.scss';
+
+:host {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+}
+
+.j-radio__field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.j-radio {
+  background: $jrm__white;
+  border: 2px solid $jrm__gray_500;
+  border-radius: 50%;
+
+  display: block;
+
+  width: 18px;
+  height: 18px;
+  transform: scale(1);
+}
+
+.j-radio__hidden {
+  cursor: pointer;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  appearance: none;
+}
+
+.j-radio__hidden:focus {
+  @include shadow-outline;
+  outline: none;
+}
+
+.j-radio__label {
+  cursor: pointer;
+  margin: 0 8px;
+  user-select: none;
+  color: $jrm__gray_800;
+  white-space: nowrap;
+}
+
+.checked {
+  background: radial-gradient(
+      $jrm__primary 0%,
+      $jrm__primary 45%,
+      $jrm__white 55%,
+      $jrm__white 100%
+  ) center;
+  background-size: cover;
+  border: 2px solid $jrm__primary;
+  animation: animateRadio 0.15s ease-in-out;
+}
+
+@keyframes animateRadio {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.reverse {
+  order: 2;
+}

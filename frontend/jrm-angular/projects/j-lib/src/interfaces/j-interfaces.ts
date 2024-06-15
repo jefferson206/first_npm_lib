@@ -7,3 +7,9 @@ export interface IJSelectOption {
   default?: boolean;
   dateType?: EDateType;
 }
+
+export interface JRadioOption {
+  value: number | string;
+  label: string;
+  disabled: boolean;
+}

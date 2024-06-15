@@ -1,15 +1,14 @@
 import {Component, OnInit } from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
+import {FormBuilder, FormsModule, Validators} from "@angular/forms";
+import {JRadioComponent} from "j-lib";
 
-import { JRadioComponent } from "j-lib";
-import { JButtonComponent } from "j-lib";
 
 @Component({
   selector: 'app-example-radio',
   standalone: true,
   imports: [
-    JRadioComponent,
-    JButtonComponent,
+    FormsModule,
+    JRadioComponent
   ],
   templateUrl: './example-radio.component.html',
 })

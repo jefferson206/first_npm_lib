@@ -3,7 +3,7 @@ import { JButtonComponent } from "j-lib";
 import { JInputComponent } from "j-lib";
 import {FormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
 // import { JButtonComponent } from "jrm-lib"; // Import from npm
-// import { JInputComponent } from "jrm-lib"; // Import from npm
+// import { JaInputComponent } from "jrm-lib"; // Import from npm
 @Component({
   selector: 'app-example-input',
   standalone: true,
@@ -23,7 +23,6 @@ export class ExampleInputComponent {
   constructor(private formBuilder: FormBuilder) {
   }
 
-  readonly customPatterns = { '0': { pattern: new RegExp('\[a-zA-Z\]')} };
 
   handleClickTeste() {
     this.formGroup.controls.name.setErrors({'incorrect': true});
