@@ -1,0 +1,24 @@
+<ng-container *ngFor="let option of options; index as i ;trackBy:trackByFn;">
+	<span #jRadioField [hidden]="hideWhereDisabled && option?.disabled"
+        class="j-radio__field"
+        [ngClass]="option?.disabled ? 'disabled' : ''"
+  >
+		<span #jRadio
+          class="j-radio"
+          [ngClass]="{'reverse': isRadioReverse}"
+          [ngStyle]="style">
+			<input type="radio"
+             autocomplete="unknown"
+             class="j-radio__hidden"
+             [id]="prefixId+'__'+id+'__'+option.value"
+             [attr.disabled]="option?.disabled ? '' : null"
+             [hidden]="option?.disabled"
+             (click)="handleClick(i, option.value)"
+             (keyup.space)="handleClick(i, option.value)">
+		</span>
+		<label class="j-radio__label"
+           [ngStyle]="{'text-wrap': isLabelTextWrap ? 'wrap' : ''}"
+           [for]="prefixId+'__'+id+'__'+option.value"> {{option.label}}
+		</label>
+	</span>
+</ng-container>
