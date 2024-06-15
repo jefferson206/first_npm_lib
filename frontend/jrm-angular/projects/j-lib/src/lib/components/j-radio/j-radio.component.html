@@ -1,11 +1,11 @@
-<ng-container *ngFor="let option of options; index as i ;trackBy:trackByFn;">
+<ng-container *ngFor="let option of options; index as i ; trackBy:trackByFn;">
 	<span #jRadioField [hidden]="hideWhereDisabled && option?.disabled"
         class="j-radio__field"
         [ngClass]="option?.disabled ? 'disabled' : ''"
   >
 		<span #jRadio
           class="j-radio"
-          [ngClass]="{'reverse': isRadioReverse}"
+          [ngClass]="{'reverse': labelBehindRadio}"
           [ngStyle]="style">
 			<input type="radio"
              autocomplete="unknown"
